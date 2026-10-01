@@ -1,17 +1,15 @@
 # NAME: AI
 # AUTHOR: gonepaul
-# SOURCE: https://ddgksf2013.top/filter/Ai.yaml
-# MERGED: local Quantumult X AI / Gemini rules
+# SOURCE: https://ddgksf2013.top/filter/Ai.yaml + local Quantumult X rules
 # UPDATED: 2026-09-30
-# HOST: 31, HOST-SUFFIX: 69, HOST-KEYWORD: 4, IP-CIDR: 1, IP6-CIDR: 1, IP-ASN: 1, TOTAL: 107
+# HOST: 31, HOST-SUFFIX: 68, HOST-KEYWORD: 4, IP-CIDR: 1, IP6-CIDR: 1, IP-ASN: 1, TOTAL: 106
 #
-# Quantumult X remote filter. force-policy on the subscription
-# overrides the trailing policy name.
-#
-# Broad suffixes that also match normal traffic are omitted:
-# cloudflare.com, amazonaws.com, wp.com, googleapis.com,
-# googleusercontent.com, apis.google.com, clients4/6.google.com,
-# azureedge.net, imgix.net, meta.com, facebook.com, fbcdn.net.
+# Duplicates removed. A host covered by a kept suffix is removed.
+# Omitted over-broad suffixes: cloudflare.com, amazonaws.com, wp.com,
+# googleapis.com, googleusercontent.com, apis.google.com,
+# clients4.google.com, clients6.google.com, azureedge.net, imgix.net,
+# meta.com, facebook.com, fbcdn.net.
+# The trailing policy is a placeholder; force-policy overrides it.
 
 # > Ai general rules
 HOST,api.statsig.com,AI
@@ -137,29 +135,24 @@ HOST-SUFFIX,hf.space,AI
 HOST-SUFFIX,manus.im,AI
 HOST-SUFFIX,manuscdn.com,AI
 
-# Local: Anthropic / Claude
+# Local additions: Anthropic / Claude
 HOST-SUFFIX,clau.de,AI
 HOST-SUFFIX,claudemcpclient.com,AI
 HOST-SUFFIX,claudemcpcontent.com,AI
 HOST,servd-anthropic-website.b-cdn.net,AI
 HOST,anthropic.com.cdn.cloudflare.net,AI
 HOST,anthropic-com.ghost.io,AI
-
-# Local: telemetry used by Claude / ChatGPT
 HOST,browser-intake-us5-datadoghq.com,AI
 HOST-KEYWORD,datadog,AI
-HOST-KEYWORD,sift,AI
 HOST-KEYWORD,sentry,AI
-
-# Local: Gemini, must be matched before generic Google rules
-HOST-SUFFIX,bard.google.com,AI
-HOST-SUFFIX,generativelanguage.googleapis.com,AI
-HOST-SUFFIX,aistudio.google.com,AI
-HOST-SUFFIX,alkalimakersuite-pa.clients6.google.com,AI
-HOST-SUFFIX,labs.google,AI
-HOST-KEYWORD,gemini,AI
-
-# Local: IP / ASN
+HOST-KEYWORD,sift,AI
 IP-CIDR,160.79.104.0/21,AI,no-resolve
 IP6-CIDR,2607:6bc0::/32,AI,no-resolve
 IP-ASN,399358,AI
+
+# Local additions: Gemini
+HOST-SUFFIX,bard.google.com,AI
+HOST-SUFFIX,generativelanguage.googleapis.com,AI
+HOST-SUFFIX,aistudio.google.com,AI
+HOST-SUFFIX,labs.google,AI
+HOST-KEYWORD,gemini,AI
