@@ -1,8 +1,8 @@
 # NAME: AI
 # AUTHOR: gonepaul
 # SOURCE: https://ddgksf2013.top/filter/Ai.yaml + local Quantumult X rules
-# UPDATED: 2026-09-30
-# HOST: 31, HOST-SUFFIX: 68, HOST-KEYWORD: 4, IP-CIDR: 1, IP6-CIDR: 1, IP-ASN: 1, TOTAL: 106
+# UPDATED: 2026-10-21
+# HOST: 30, HOST-SUFFIX: 77, HOST-KEYWORD: 4, IP-CIDR: 1, IP6-CIDR: 1, IP-ASN: 1, TOTAL: 114
 #
 # Duplicates removed. A host covered by a kept suffix is removed.
 # Omitted over-broad suffixes: cloudflare.com, amazonaws.com, wp.com,
@@ -29,7 +29,6 @@ HOST-SUFFIX,sentry.io,AI
 HOST-SUFFIX,stripe.com,AI
 
 # > Anthropic/Claude
-HOST,cdn.usefathom.com,AI
 HOST-SUFFIX,anthropic.com,AI
 HOST-SUFFIX,claude.ai,AI
 HOST-SUFFIX,claude.com,AI
@@ -156,3 +155,14 @@ HOST-SUFFIX,generativelanguage.googleapis.com,AI
 HOST-SUFFIX,aistudio.google.com,AI
 HOST-SUFFIX,labs.google,AI
 HOST-KEYWORD,gemini,AI
+
+# Supplement: one-exit
+HOST-SUFFIX,modelcontextprotocol.io,AI
+HOST-SUFFIX,growthbook.io,AI
+HOST-SUFFIX,usefathom.com,AI
+HOST-SUFFIX,hcaptcha.com,AI
+HOST-SUFFIX,challenges.cloudflare.com,AI
+HOST-SUFFIX,recaptcha.net,AI
+HOST-SUFFIX,stripe.network,AI
+HOST-SUFFIX,stripecdn.com,AI
+HOST-SUFFIX,withpersona.com,AI
